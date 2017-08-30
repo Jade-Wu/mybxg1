@@ -19,7 +19,7 @@ if(array_key_exists('PATH_INFO',$_SERVER)) {
         $filename = 'login';
     }
 
-                    echo $path;
+//                    echo $path;
                 }
 
                     //路径的格式
