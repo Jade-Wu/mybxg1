@@ -11,11 +11,12 @@ if(array_key_exists('PATH_INFO',$_SERVER)) {
     $str = substr($path,1); // main/index
     //分割路径和文件名称
     $arr = explode('/',$str);
+    //add  这个地址会根据url的不同，作相应的调整
     if (count($arr) == 2) {
         $dir = $arr[0]; // 覆盖目录名称
         $filename = $arr[1]; // 覆盖文件名称
     }else {
-        // 如果不是两层路径就跳转到登录页面
+        // 如果不是两层路径就跳转到登录页面（add 不是两层路径，不符合规则）
         $filename = 'login';
     }
 
